@@ -81,7 +81,7 @@ public class Empresa {
         empleado1.mostrarInformacion();
         empleado2.mostrarInformacion();
         empleado3.mostrarInformacion();
-
+        //FelipeZapata
         teclado.close();
     }
 }
