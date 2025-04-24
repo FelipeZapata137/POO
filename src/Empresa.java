@@ -81,6 +81,7 @@ public class Empresa {
         empleado1.mostrarInformacion();
         empleado2.mostrarInformacion();
         empleado3.mostrarInformacion();
+        System.out.println("\nRegistro finalizado.");
 
         teclado.close();
     }
