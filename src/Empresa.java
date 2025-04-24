@@ -14,7 +14,7 @@ class Empleado{
         this.salario = salario;
         this.fechaIngreso = fechaIngreso;
     }
-
+    // XD
     //Métod para mostrar información
     void mostrarInformacion() {
         System.out.println("--- Ficha de empleado ---");
