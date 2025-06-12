@@ -3,7 +3,7 @@ package modelo;
 
 public abstract class Servicio {
 
-    protected boolean maletaAdicional; // Opción a maleta adicional
+    protected boolean maletaAdicional;
 
     public Servicio(boolean maletaAdicional) {
         this.maletaAdicional = maletaAdicional;

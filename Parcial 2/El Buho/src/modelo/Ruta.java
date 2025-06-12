@@ -7,16 +7,15 @@ public class Ruta {
     private static final Map<String, Double> PRECIOS_RUTAS_BASE = new HashMap<>();
 
     static {
-        PRECIOS_RUTAS_BASE.put("Quito-Guayaquil", 20.00); [cite: 3]
-        PRECIOS_RUTAS_BASE.put("Quito-Puyo", 15.00); [cite: 3]
-        PRECIOS_RUTAS_BASE.put("Quito-Tulcán", 17.50); [cite: 3]
-        PRECIOS_RUTAS_BASE.put("Quito-Riobamba", 17.50); [cite: 3]
+        PRECIOS_RUTAS_BASE.put("Quito-Guayaquil", 20.00);
+        PRECIOS_RUTAS_BASE.put("Quito-Puyo", 15.00);
+        PRECIOS_RUTAS_BASE.put("Quito-Tulcán", 17.50);
+        PRECIOS_RUTAS_BASE.put("Quito-Riobamba", 17.50);
 
-        // Añadir las rutas de retorno con el mismo precio
-        PRECIOS_RUTAS_BASE.put("Guayaquil-Quito", 20.00); [cite: 3, 4]
-        PRECIOS_RUTAS_BASE.put("Puyo-Quito", 15.00); [cite: 3, 4]
-        PRECIOS_RUTAS_BASE.put("Tulcán-Quito", 17.50); [cite: 3, 4]
-        PRECIOS_RUTAS_BASE.put("Riobamba-Quito", 17.50); [cite: 3, 4]
+        PRECIOS_RUTAS_BASE.put("Guayaquil-Quito", 20.00);
+        PRECIOS_RUTAS_BASE.put("Puyo-Quito", 15.00);
+        PRECIOS_RUTAS_BASE.put("Tulcán-Quito", 17.50);
+        PRECIOS_RUTAS_BASE.put("Riobamba-Quito", 17.50);
     }
 
     private String nombreRuta;

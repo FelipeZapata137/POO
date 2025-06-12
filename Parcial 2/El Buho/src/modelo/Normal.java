@@ -46,7 +46,7 @@ public class Normal extends Servicio {
     public void describirServicio() {
         System.out.println("--- Servicio Normal ---");
         System.out.println("Tipo de Asiento: " + posicionAsiento);
-        System.out.println("Maletas permitidas: " + getNumMaletas() + " (1 incluida, " + (tieneMaletaAdicional() ? "1 adicional con costo extra)" : "sin adicional)")); [cite: 5, 6]
+        System.out.println("Maletas permitidas: " + getNumMaletas() + " (1 incluida, " + (tieneMaletaAdicional() ? "1 adicional con costo extra)" : "sin adicional)"));
     }
 
     public static String getPosicionAsientoByIndex(int index) {

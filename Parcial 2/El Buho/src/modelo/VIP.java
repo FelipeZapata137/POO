@@ -5,24 +5,22 @@ public class VIP extends Servicio {
     private String servicioAdicional1;
     private String servicioAdicional2;
     private String servicioAdicional3;
-    private int numMaletas;
+    private int numMaletasIncluidas;
 
-    // Constructor
+    private static final double COSTO_MALETA_ADICIONAL = 5.0;
+
     public VIP(boolean maletaAdicional, String servicioAdicional3) {
         super(maletaAdicional);
-        this.servicioAdicional1 = "Televisión"; [cite: 6]
-        this.servicioAdicional2 = "Internet"; [cite: 6]
+
+        this.servicioAdicional1 = "Televisión";
+        this.servicioAdicional2 = "Internet";
         this.servicioAdicional3 = servicioAdicional3;
-        this.numMaletas = 2; // Por defecto, dos maletas incluidas
-        if (maletaAdicional) {
-            this.numMaletas++; // Si hay maleta adicional, se suma
-        }
+        this.numMaletasIncluidas = 2;
     }
 
     public String getServicioAdicional1() {
         return servicioAdicional1;
     }
-
 
     public String getServicioAdicional2() {
         return servicioAdicional2;
@@ -37,26 +35,23 @@ public class VIP extends Servicio {
     }
 
     public int getNumMaletas() {
-        return numMaletas;
+        return numMaletasIncluidas + (tieneMaletaAdicional() ? 1 : 0);
     }
 
     @Override
     public double calcularCostoServicio(double precioBaseRuta) {
         double costoConRecargo = precioBaseRuta * (1 + RECARGO_VIP);
         if (tieneMaletaAdicional()) {
-            costoConRecargo += 5.0;
+            costoConRecargo += COSTO_MALETA_ADICIONAL;
         }
         return costoConRecargo;
     }
 
-    @Override //
+    @Override
     public void describirServicio() {
         System.out.println("--- Servicio VIP ---");
-        System.out.println("Recargo del " + (RECARGO_VIP * 100) + "% sobre el pasaje normal."); [cite: 6]
-        System.out.println("Servicios incluidos: " + servicioAdicional1 + ", " + servicioAdicional2 + ", " + servicioAdicional3 + "."); [cite: 6]
-        System.out.println("Espacio para " + numMaletas + " maleta(s)."); [cite: 7]
-        if (tieneMaletaAdicional()) {
-            System.out.println("Incluye una maleta adicional (costo extra)."); [cite: 6]
-        }
+        System.out.println("Recargo del " + (RECARGO_VIP * 100) + "% sobre el pasaje normal.");
+        System.out.println("Servicios incluidos: " + servicioAdicional1 + ", " + servicioAdicional2 + ", " + servicioAdicional3 + ".");
+        System.out.println("Maletas permitidas: " + getNumMaletas() + " (2 incluidas, " + (tieneMaletaAdicional() ? "1 adicional con costo extra)" : "sin adicional)"));
     }
 }
