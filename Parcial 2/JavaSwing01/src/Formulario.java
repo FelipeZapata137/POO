@@ -75,8 +75,8 @@ public class Formulario extends JFrame {
                 NombreTXT.setText("");
                 ApellidoTXT.setText("");
                 EdadTXT.setText("");
-                MasculinoBTN.setSelected(false);
-                FemeninoBTN.setSelected(false);
+                DatosLBL.setText("");
+                grupoGenero.clearSelection();
             }
         });
     }
